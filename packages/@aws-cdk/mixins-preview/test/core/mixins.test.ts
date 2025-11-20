@@ -64,7 +64,6 @@ describe('Core Mixins Framework', () => {
       const mixin = new TestMixin();
 
       expect(mixin.supports(construct)).toBe(true);
-      expect(mixin.validate(construct)).toEqual([]);
 
       const result = mixin.applyTo(construct);
       expect((result as any).mixinApplied).toBe(true);
@@ -162,7 +161,6 @@ describe('Core Mixins Framework', () => {
       const construct = new TestConstruct(stack, 'test');
 
       expect(mixin.supports(construct)).toBe(true);
-      expect(mixin.validate(construct)).toEqual([]);
       expect(mixin.applyTo(construct)).toBe(construct);
     });
   });

@@ -1,6 +1,5 @@
 {
   "name": "@aws-cdk/mixins-preview",
-  "private": true,
   "version": "0.0.0",
   "description": "Preview of CDK Mixins - composable, reusable abstractions that can be applied to any construct (L1, L2 or custom).",
   "main": "lib/index.js",
