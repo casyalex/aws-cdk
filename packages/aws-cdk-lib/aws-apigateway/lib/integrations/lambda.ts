@@ -41,6 +41,12 @@ export interface LambdaIntegrationOptions extends IntegrationOptions {
    * @default true
    */
   readonly scopePermissionToMethod?: boolean;
+
+  /**
+   * When lambda are not in the same region of gateway, you need to specific the lambda region.
+   */
+
+  readonly region?: string;
 }
 
 /**
@@ -66,6 +72,7 @@ export class LambdaIntegration extends AwsIntegration {
       service: 'lambda',
       path: `2015-03-31/functions/${handler.functionArn}/invocations`,
       options,
+      region: options.region
     });
 
     this.handler = handler;
